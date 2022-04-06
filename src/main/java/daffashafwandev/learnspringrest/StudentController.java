@@ -30,7 +30,7 @@ public class StudentController {
     public ResponseEntity<Object> createPerson(@RequestBody Student student) {
         try{
            Student studentResp =  studentService.saveUpdateStudent(student);
-           return ResponseHandler.generateResponse("Success Add Data", HttpStatus.OK, studentResp);
+           return ResponseHandler.generateResponse("Successed Add Data", HttpStatus.OK, studentResp);
         }catch (Exception e){
             return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.MULTI_STATUS, null);
         }
